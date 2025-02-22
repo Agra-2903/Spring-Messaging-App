@@ -1,15 +1,19 @@
 package com.example.SpringMessagingApp.controller;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import com.example.SpringMessagingApp.model.User;
 >>>>>>> UC4
+=======
+>>>>>>> UC5
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/hello")
 public class HelloController {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     // GET Request with Query Parameter
@@ -27,5 +31,11 @@ public class HelloController {
     public String sayHello(@RequestBody User user) {
         return "Hello " + user.getFirstName() + " " + user.getLastName() + " from BridgeLabz!";
 >>>>>>> UC4
+=======
+    // PUT Request with Path Variable and Query Parameter
+    @PutMapping("/put/{firstName}")
+    public String sayHello(@PathVariable String firstName, @RequestParam(value = "lastName") String lastName) {
+        return "Hello " + firstName + " " + lastName + " from BridgeLabz!";
+>>>>>>> UC5
     }
 }
